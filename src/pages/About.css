@@ -1,0 +1,80 @@
+.about-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .mission-section, .how-it-works, .team-section, .values-section {
+    margin-bottom: 40px;
+    color: white;
+  }
+  
+  .mission-section h2, .how-it-works h2, .team-section h2, .values-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .mission-section p, .how-it-works p, .values-section p {
+    font-size: 1.1rem;
+    color: white;
+  }
+  
+  .how-it-works ul, .values-section ul {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+  }
+  
+  .how-it-works li, .values-section li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+    color: white;
+  }
+  
+  .how-it-works li strong, .values-section li strong {
+    color: white;
+  }
+  
+  .team-section .team-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.4rem;
+    color: white;
+  }
+  
+  .team-member p {
+    font-size: 1.1rem;
+    color: white;
+  }
+  
