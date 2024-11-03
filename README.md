@@ -1,70 +1,109 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Name Initiater
 
-## Available Scripts
+**Name Initiater** is a React-based application that helps users generate creative and SEO-friendly domain name suggestions for their projects. It leverages Google’s Generative AI API for providing intelligent domain name ideas based on keywords, industry, and preferred TLDs (Top-Level Domains). Users can also bookmark their favorite domain names and view suggestions based on specific criteria.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Setup Instructions](#setup-instructions)
+- [Environment Variables](#environment-variables)
+- [Running the Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Domain Search**: Quickly search for domain names and extensions relevant to a project or industry.
+- **AI-Generated Suggestions**: Generate unique domain names using Google’s Generative AI based on project title, description, keywords, and industry.
+- **Bookmark Domains**: Save favorite domain names for easy reference.
+- **Protected Routes**: Uses Auth0 for authenticated access to AI-generated suggestions and bookmarking features.
 
-### `npm test`
+## Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) and npm installed
+- MongoDB connection string for saving bookmarks and fetching data
+- Google Generative AI API key
+- Auth0 account for user authentication
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository.
+2. Install dependencies in the backend folder:
+   ```bash
+   cd backend
+   npm install
+   ```
+3. Update `uri` in `server.js` with your MongoDB connection string.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the backend server:
+   ```bash
+   node server.js
+   ```
+   The server will run on `http://localhost:5050`.
 
-### `npm run eject`
+### Frontend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Install dependencies in the frontend folder:
+   ```bash
+   cd frontend
+   npm install
+   ```
+2. Create a `.env` file in the frontend folder and add your environment variables.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Environment Variables
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Add the following environment variables to your `.env` file:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+REACT_APP_GOOGLE_GENAI_API_KEY=<Your Google Generative AI API Key>
+REACT_APP_AUTH0_DOMAIN=<Your Auth0 Domain>
+REACT_APP_AUTH0_CLIENT_ID=<Your Auth0 Client ID>
+```
 
-## Learn More
+## Running the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Run the backend server:
+   ```bash
+   cd backend
+   node server.js
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Run the frontend:
+   ```bash
+   cd frontend
+   npm start
+   ```
 
-### Code Splitting
+3. Access the application at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Endpoints
 
-### Analyzing the Bundle Size
+- **Industries** (`/api/industries`): Fetches available industries for domain name generation.
+- **Extensions** (`/api/extensions`): Retrieves TLDs for domain suggestions.
+- **Random Extensions** (`/api/random-extensions`): Fetches 3 random TLDs.
+- **Bookmarks** (`/api/bookmarks`): Saves or retrieves user-specific bookmarked domains.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies Used
 
-### Making a Progressive Web App
+- **Frontend**: React, React Router, axios, react-select, Google Generative AI
+- **Backend**: Node.js, Express, Mongoose, MongoDB, CORS
+- **Authentication**: Auth0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Enhancements
 
-### Advanced Configuration
+- Add additional domain customization options (e.g., length, number of words).
+- Implement domain availability check for real-time validation.
+- Expand to support more industry and TLD options.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+*Coming Soon!*
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy using **Name Initiater**! Feel free to contribute and suggest new features.
