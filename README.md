@@ -109,5 +109,7 @@ REACT_APP_AUTH0_CLIENT_ID=<Your Auth0 Client ID>
 <img width="1728" alt="ss3" src="https://github.com/user-attachments/assets/fc819507-3e0a-49aa-95b1-c342a9098e81">
 <img width="1728" alt="ss4" src="https://github.com/user-attachments/assets/4b84753f-d60b-41a1-a53f-18dbe79667c5">
 
+Below is the video demo for the project:
+<a href="https://youtu.be/KaWnfWSDzTM">Watch Demo</a>
 
 Enjoy using **Name Initiater**! Feel free to contribute and suggest new features.
